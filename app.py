@@ -1,9 +1,3 @@
-streamlit
-pandas
-numpy
-joblib
-scikit-learn
-xgboost
 import os
 import json
 import joblib
@@ -116,4 +110,5 @@ with tab4:
         m1, m2 = st.columns(2)
         m1.metric("Correctly detected", f"{correct} / {len(out)}")
         m2.metric("Attacks flagged", int((out["Predicted"] != "Normal").sum()))
+
         st.dataframe(out, hide_index=True)
